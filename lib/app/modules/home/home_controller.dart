@@ -13,12 +13,12 @@ class HomeController extends GetxController {
     _init();
   }
 
-  void cerrarSesion() async {
-    final SharedPreferences prefs = await _prefs;
-    prefs.clear();
-    await _storage.deleteAll();
-    Get.offAllNamed(AppRoutes.SPLASH);
-  }
+  // void cerrarSesion() async {
+  //   final SharedPreferences prefs = await _prefs;
+  //   prefs.clear();
+  //   await _storage.deleteAll();
+  //   Get.offAllNamed(AppRoutes.SPLASH);
+  // }
 
   _init() async {
     final SharedPreferences prefs = await _prefs;
