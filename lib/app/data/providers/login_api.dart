@@ -12,7 +12,7 @@ class LoginAPI {
   Future<UserData> login(String usuario, String password) async {
     print("_usuario: $usuario");
     print("_password: $password");
-    final Response response = await _dio.post('/login',
+    final Response response = await _dio.post('/app-login',
         data: {"usuario": usuario.trim(), "password": password.trim()});
     return UserData.fromJson(response.data);
   }

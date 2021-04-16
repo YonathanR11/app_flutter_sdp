@@ -33,9 +33,10 @@ class LoginController extends GetxController {
       print("statusCode: ${e.response.statusCode}");
       if (e.response.statusCode == 400) {
         print("IF");
+        print("data: ${e.response.data}");
         Get.defaultDialog(
             title: "Error",
-            content: Text("${e.response.data['message']}"),
+            content: Text("${e.response.data['mensaje']}"),
             confirm: TextButton(
                 onPressed: () {
                   Get.back();

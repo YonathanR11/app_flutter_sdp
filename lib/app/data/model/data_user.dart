@@ -1,6 +1,9 @@
+import 'package:meta/meta.dart';
 import 'dart:convert';
 
-import 'package:meta/meta.dart';
+UserData userDataFromJson(String str) => UserData.fromJson(json.decode(str));
+
+String userDataToJson(UserData data) => json.encode(data.toJson());
 
 class UserData {
   UserData({
@@ -8,10 +11,10 @@ class UserData {
     @required this.rol,
     @required this.idUsuario,
     @required this.usuario,
-    @required this.partnerId,
-    @required this.nombre,
-    @required this.apellidoPaterno,
-    @required this.apellidoMaterno,
+    @required this.idPartner,
+    @required this.nombrePartner,
+    @required this.apellidoPaternoPartner,
+    @required this.apellidoMaternoPartner,
     @required this.idPartnerTipo,
     @required this.nombrePartnerTipo,
     @required this.idSucursal,
@@ -24,10 +27,10 @@ class UserData {
   final String rol;
   final int idUsuario;
   final String usuario;
-  final int partnerId;
-  final String nombre;
-  final String apellidoPaterno;
-  final String apellidoMaterno;
+  final int idPartner;
+  final String nombrePartner;
+  final String apellidoPaternoPartner;
+  final String apellidoMaternoPartner;
   final int idPartnerTipo;
   final String nombrePartnerTipo;
   final int idSucursal;
@@ -40,10 +43,10 @@ class UserData {
         rol: json["rol"],
         idUsuario: json["idUsuario"],
         usuario: json["usuario"],
-        partnerId: json["partnerId"],
-        nombre: json["nombre"],
-        apellidoPaterno: json["apellidoPaterno"],
-        apellidoMaterno: json["apellidoMaterno"],
+        idPartner: json["idPartner"],
+        nombrePartner: json["nombrePartner"],
+        apellidoPaternoPartner: json["apellidoPaternoPartner"],
+        apellidoMaternoPartner: json["apellidoMaternoPartner"],
         idPartnerTipo: json["idPartnerTipo"],
         nombrePartnerTipo: json["nombrePartnerTipo"],
         idSucursal: json["idSucursal"],
@@ -59,10 +62,10 @@ class UserData {
         "rol": rol,
         "idUsuario": idUsuario,
         "usuario": usuario,
-        "partnerId": partnerId,
-        "nombre": nombre,
-        "apellidoPaterno": apellidoPaterno,
-        "apellidoMaterno": apellidoMaterno,
+        "idPartner": idPartner,
+        "nombrePartner": nombrePartner,
+        "apellidoPaternoPartner": apellidoPaternoPartner,
+        "apellidoMaternoPartner": apellidoMaternoPartner,
         "idPartnerTipo": idPartnerTipo,
         "nombrePartnerTipo": nombrePartnerTipo,
         "idSucursal": idSucursal,
