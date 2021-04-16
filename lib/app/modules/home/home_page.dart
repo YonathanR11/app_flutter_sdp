@@ -16,6 +16,9 @@ class HomePage extends StatelessWidget {
               child: Obx(
                 () => Text('${ctrl.menu.value}'),
               ),
+            ),
+            Center(
+              child: Obx(() => Text('${ctrl.token.value}')),
             )
           ],
         ),
