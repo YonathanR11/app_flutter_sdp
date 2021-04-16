@@ -21,22 +21,27 @@ class MenuLateralPage extends StatelessWidget {
                     margin: EdgeInsets.zero,
                     padding: EdgeInsets.zero,
                     decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.fill,
-                            image: NetworkImage(
-                                'https://blog.sebastiano.dev/content/images/2019/07/1_l3wujEgEKOecwVzf_dqVrQ.jpeg'))),
+                      image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image:
+                            AssetImage("lib/app/assets/images/flutter_dev.png"),
+                        // image: NetworkImage(
+                        //     'https://blog.sebastiano.dev/content/images/2019/07/1_l3wujEgEKOecwVzf_dqVrQ.jpeg'),
+                      ),
+                    ),
                     child: Stack(
                       children: <Widget>[
                         Positioned(
-                          bottom: 12.0,
+                          bottom: 0.0,
                           left: 16.0,
                           child: Obx(
                             () => Text(
                               "${ctrl.nombrePartner.value}",
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.w500),
+                                color: Colors.amber[900],
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
                         ),
@@ -51,7 +56,9 @@ class MenuLateralPage extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return ListTile(
                             title: Text(ctrl.menu[index].titulo),
-                            // leading: Icon(ctrl.menu[index].icono),
+                            leading: Icon(IconData(
+                                int.parse(ctrl.menu[index].icono),
+                                fontFamily: 'MaterialIcons')),
                             trailing: Icon(Icons.chevron_right),
                             onTap: () {
                               Get.back();
