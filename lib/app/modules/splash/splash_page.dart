@@ -10,18 +10,9 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<SplashController>(
         builder: (ctrl) => Scaffold(
+              backgroundColor: Colors.white,
               body: Center(
-                child: TextButton(
-                    onPressed: () {
-                      ctrl.metodo();
-                    },
-                    child: Text("PRINT"),
-                    style: ButtonStyle(
-                        foregroundColor:
-                            MaterialStateProperty.all<Color>(Colors.white),
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.blue))),
-              ),
+                  child: Image.asset("lib/app/assets/images/flutter_dev.png")),
             ));
   }
 }

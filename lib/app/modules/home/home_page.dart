@@ -9,7 +9,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(
-      builder: (ctrl) => Scaffold(),
+      builder: (ctrl) => Scaffold(
+        body: Column(
+          children: [
+            Center(
+              child: Obx(
+                () => Text('${ctrl.menu.value}'),
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

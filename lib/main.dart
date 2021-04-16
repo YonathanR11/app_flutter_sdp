@@ -1,3 +1,4 @@
+import 'package:app/app/utils/dependency_injection.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
@@ -6,6 +7,7 @@ import 'app/modules/splash/splash_page.dart';
 import 'app/routes/app_pages.dart';
 
 void main() {
+  DependencyInjection.init();
   runApp(MyApp());
 }
 
