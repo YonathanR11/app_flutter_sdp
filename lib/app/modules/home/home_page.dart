@@ -87,15 +87,11 @@ class HomePage extends StatelessWidget {
           ),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-              child: Obx(
-                () => Text('${ctrl.menu.value}'),
-              ),
+              child: Text('Home'),
             ),
-            Center(
-              child: Obx(() => Text('${ctrl.token.value}')),
-            )
           ],
         ),
       ),
