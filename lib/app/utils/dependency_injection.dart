@@ -8,6 +8,6 @@ class DependencyInjection {
   static void init() {
     Get.lazyPut(() => Dio(BaseOptions(baseUrl: Constant.BASE_URL)));
     Get.lazyPut(() => LoginAPI());
-    Get.lazyPut(() => LoginRepository());
+    Get.put(LoginRepository());
   }
 }

@@ -26,6 +26,8 @@ class LoginController extends GetxController {
           await _repository.login(this._usuario, this._password);
 
       final SharedPreferences prefs = await _prefs;
+      prefs.setString("nombrePartner",
+          "${userData.nombrePartner} ${userData.apellidoPaternoPartner} ${userData.apellidoMaternoPartner}");
       prefs.setString("menuLateral", json.encode(userData.menuLateral));
       prefs.setString(
           "menuNavigationBar", json.encode(userData.menuNavigationBar));
